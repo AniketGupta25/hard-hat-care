@@ -3,9 +3,57 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
+import React, { CSSProperties } from 'react';
+import ReactDOM from 'react-dom'
+import CSVReader from 'react-csv-reader'
+
 const inter = Inter({ subsets: ['latin'] })
 
+interface rowFeatures {
+  gender : string,
+  hours: number,
+}
+
+import { 
+  Button,
+  Flex, FormControl, FormLabel, Heading, Input, Text, Box, Select, chakra, Divider, Grid, GridItem
+} from '@chakra-ui/react'
+import { useState } from 'react'
+import DataRow from '@/components/DataRow'
+
 export default function Home() {
+  const [onLandingPage, setOnLandingPage] = useState(true);
+  const emptyArray : Array<any> = [];
+  const [csvData, setCSVData] = useState<Array<any>>(emptyArray);
+
+  const uploadCSV = ()=>{
+    setOnLandingPage(!onLandingPage);
+  }
+
+  const papaparseOptions = {
+    header: true,
+    dynamicTyping: true,
+    skipEmptyLines: true,
+    transformHeader: (header : any) =>
+      header
+        .toLowerCase()
+        .replace(/\W/g, '_')
+  }
+
+  const fetchConfig = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(csvData), 
+  }
+
+  const onSubmit = async () => {
+    const response = await fetch("/api/process", fetchConfig);
+    const data = await response.json();
+  }
+
+
   return (
     <>
       <Head>
@@ -14,101 +62,79 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
+
+      {onLandingPage && 
+          <Flex bg="black" direction="column" height="100vh" width="100vw" color="white" align="center" justify="center" textAlign="center">
+            <Heading fontSize="9xl">Hard Hat Care</Heading>
+            <Text fontSize="3xl" width="75vw">Providing the tools to care for what matters most: your people</Text>
+            <Button colorScheme='purple' mt="60px" onClick={uploadCSV}>Start Analysis</Button>
+          </Flex>
+      }
+
+      {!onLandingPage && 
+        <Flex direction="column" bg="white" height="100vh" p="20px" width="100vw" align="center">
+          <Flex direction="column" width="100%" color="black" textAlign="center" align="center">
+            <Heading fontSize="5xl">Upload CSV</Heading>
+            <Text fontSize="lg" width="75vw">Upload a CSV file here to begin the process</Text>
+            
+              <CSVReader
+                cssClass="csv-reader-input"
+                // label="Select CSV with secret Death Star statistics"
+                onFileLoaded={(data : Array<any>, fileInfo : any, originalFile : File) => setCSVData(data)}
+                onError={()=>{}}
+                parserOptions={papaparseOptions}
+                inputId="ObiWan"
+                inputName="ObiWan"
+                inputStyle={{color: 'red'}}
               />
-            </a>
-          </div>
-        </div>
+      
+            <Button colorScheme='purple' onClick={()=>{onSubmit()}}>Process Data</Button>
+          </Flex>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-        </div>
+          <Divider m="20px"/>
 
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
+          <Flex direction="column" width="90%" bg="whitesmoke" p="20px">
+            <Box bg="lightgray" p="10px" border="solid">
+              <Grid templateColumns='repeat(5, 1fr)' gap={6}>
+                <Flex w='100%' h='10' justify="center" align="center">
+                  <Text fontWeight="900" fontSize="3xl">Gender</Text>
+                </Flex>
+                <Flex w='100%' h='10' justify="center" align="center">
+                  <Text fontWeight="900" fontSize="3xl">Hours</Text>
+                </Flex>
+                <Flex w='100%' h='10' justify="center" align="center">
+                  <Text fontWeight="900" fontSize="3xl">Soberness</Text>
+                </Flex>
+                <Flex w='100%' h='10' justify="center" align="center">
+                  <Text fontWeight="900" fontSize="3xl">Lateness</Text>
+                </Flex>
+                <Flex w='100%' h='10' justify="center" align="center">
+                  <Text fontWeight="900" fontSize="3xl">Dummy Data</Text>
+                </Flex>
+              </Grid>
+            </Box>
 
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
+            {csvData.map((val: any, key : number)=>{
+              return (
+                <DataRow genderText={val.gender} hoursText={val.hours_worked_per_day} soberText={""} lateText={""} data={""}/>
+              )
+            })
+            }
 
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+            {/* <DataRow genderText={"male"} hoursText={"some hours"} soberText={"drunk"} lateText={"very late"} data={"random data"}/>
+            <DataRow genderText={"male"} hoursText={"some hours"} soberText={"drunk"} lateText={"very late"} data={"random data"}/>
+            <DataRow genderText={"male"} hoursText={"some hours"} soberText={"drunk"} lateText={"very late"} data={"random data"}/>
+            <DataRow genderText={"male"} hoursText={"some hours"} soberText={"drunk"} lateText={"very late"} data={"random data"}/>
+            <DataRow genderText={"male"} hoursText={"some hours"} soberText={"drunk"} lateText={"very late"} data={"random data"}/>
+            <DataRow genderText={"male"} hoursText={"some hours"} soberText={"drunk"} lateText={"very late"} data={"random data"}/>
+            <DataRow genderText={"male"} hoursText={"some hours"} soberText={"drunk"} lateText={"very late"} data={"random data"}/>
+            <DataRow genderText={"male"} hoursText={"some hours"} soberText={"drunk"} lateText={"very late"} data={"random data"}/>
+            <DataRow genderText={"male"} hoursText={"some hours"} soberText={"drunk"} lateText={"very late"} data={"random data"}/>
+            <DataRow genderText={"male"} hoursText={"some hours"} soberText={"drunk"} lateText={"very late"} data={"random data"}/>
+            <DataRow genderText={"male"} hoursText={"some hours"} soberText={"drunk"} lateText={"very late"} data={"random data"}/> */}
+          </Flex>
+        </Flex>
+      }
     </>
   )
 }
