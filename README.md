@@ -26,7 +26,7 @@ Other factors include:
 * Seasonal layoff leaving workers with no job
 * High variance of salary 
 
-There is a lack of resources to help these struggling construction workers due to their work environment. Construction workers are discouraged from discussing about their mental health for fear of losing their jobs. As a result, many construction workers bottle up their emotions which can lead to depression.
+There is a lack of resources to help these struggling construction workers due to their work environment. Blue-collar workers are discouraged from discussing about their mental health for fear of losing their jobs. As a result, many construction workers bottle up their emotions which can lead to depression.
 
 Therefore, companies and employers should take the initiative to help support their workers form the backbone of society. However, it's extremely difficult for companies to keep track of their thousands of employees thus making it hard to identify struggling individuals. That's where we come in.
 
