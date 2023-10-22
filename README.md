@@ -7,10 +7,10 @@ By using a model trained on the causes of depression in the workplace, Hard Hat 
 
 We featured a robust interactive website that enables employers to organize and examine the mental well-being of their employees.
 
-INTENDED USE CASE: Corporate officers can periodically leverage this tool to identify employees most at risk for depression and get them treatment.  
+**USE CASE:** Corporate officers can periodically leverage this tool to identify employees most at risk for depression and get them treatment.  
 
 
-**PLEASE NOTE:** Hard-Hate Care is not intended to diagnose depression.
+**DISCLAIMER:** Hard-Hate Care is not intended to diagnose depression. This does not provide medical advice. Please seek professional care only.
 
 
 ## Hard hats are not enough :triangular_flag_on_post:
