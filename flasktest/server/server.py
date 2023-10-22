@@ -13,6 +13,10 @@ CORS(app)
 
 loaded_model = pickle.load(open('xgb_model.pkl', 'rb'))
 
+@app.route('/')
+def home():
+    return "HELLO WORLD UNITE!"
+
 #/api/home
 @app.route("/api/home", methods={'GET', 'POST'})
 def return_home():
