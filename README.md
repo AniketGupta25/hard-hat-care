@@ -32,7 +32,9 @@ Therefore, companies and employers should take the initiative to help support th
 
 ## Introducing our products :bulb:
 
-Hard-Hat Care serves as a tool to easily organize a large database of employee records and flag individuals who may be struggling with their mental health. The rules governing flagging mechanics are based on a robustly-trained XGBoost machine learning model. This enables companies and managers to perform follow-up actions and provide the necessary resources to help struggling employees.    
+Hard-Hat Care serves as a tool to easily organize a large database of employee records and flag individuals who may be struggling with their mental health. 
+
+The rules governing flagging mechanics are based on a robustly-trained XGBoost and tuned machine learning model. This enables companies and managers to perform follow-up actions and provide the necessary resources to help struggling employees.    
  
 
 ### How does it work:question:
@@ -57,7 +59,7 @@ Clients must upload a CSV file containing this data. This score is used to flag 
 
 ## Challenges faced when building :confused:
 
-**Finding Accurate Data:** Given the gravity of mental health problems, we wanted to find an accurate and reliable quantitative database to train our model and provide factually relevant results. However, this proved to be our biggest obstacle during HackTX23 for the following reasons:
+**Finding Accurate Data:** Given the gravity of mental health problems, we wanted to find an accurate and reliable quantitative database to train our model. However, this proved to be our biggest obstacle during HackTX23 for the following reasons:
 * Lack of datasets in the mental health sphere *(especially in blue-collar jobs)*
 * The time taken to find viable datasets with quantative data points, not textual
 
@@ -69,7 +71,8 @@ Clients must upload a CSV file containing this data. This score is used to flag 
 
 ## What we learned :mortar_board:
 
-The construction industry poses specific challenges to the mental health of its workers, including high stress, physical strain, job insecurity, and isolation. However, there is a growing recognition of these issues, and efforts are being made to improve mental health awareness, reduce stigma, and provide support and resources to workers in this field. The ultimate goal is to create a more mentally healthy and supportive environment within the construction industry. We hope our tool can play a small part in acheiving this goal. :)
+The construction industry poses specific challenges to the mental health of its workers, including high stress, physical strain, job insecurity, and isolation. However, there is a growing recognition of these issues, and efforts are being made to improve mental health awareness, reduce stigma, and provide support and resources to workers in this field. 
+The ultimate goal is to create a more mentally healthy and supportive environment within the construction industry. We hope our tool can play a small part in acheiving this goal. :)
 
 
 ## Contribution :smile:
