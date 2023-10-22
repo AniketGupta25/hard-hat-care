@@ -1,7 +1,7 @@
 # Hard Hat Care
+### Detecting Mental Health for Construction Workers
 
-
-Hard Hat Care aims improve the mental health of construction workers by flagging employees that show signs of poor mental health. We feature a robust, interactive website that enables employers to organize and examine the mental well-being of their employees.
+[Hard Hat Care](https://hardhatcare.vercel.app/) aims improve the mental health of construction workers by flagging employees that show signs of poor mental health. We feature a robust, interactive website that enables employers to organize and examine the mental well-being of their employees.
 
 **USE CASE:** Corporate officers and site managers can leverage this tool to periodically identify at risk employees, allowing them to proactively reach out and provide the necessary mental health support. 
 
@@ -38,11 +38,11 @@ Hard Hat Care uses a model that computes a mental health score based on the foll
 4. Resource Allocation ([1.0, 10.0] where higher means higher workload)
 5. Performance ([0.0, 10.0] where higher means higher performance)
 
-Clients must upload a CSV file containing this data. This mental health score is used to flag employees. Download [CSV Template]()
+Clients must upload a CSV file containing this data. This mental health score is used to flag employees. Download [CSV Template](https://docs.google.com/spreadsheets/d/1om5U6xhkWiE-CyPoaX19Q27GeKYqy9NBTEb7kW10p2Q/edit?usp=sharing)
 
 ## How to Use :notebook:
 
-1. Go to [HardHatCare]() website
+1. Go to [HardHatCare](https://hardhatcare.vercel.app/) website
 2. Click the *"Start Analysis"* button
 3. Upload a CSV file to the website (**Note:** an empty template CSV file is provided)
 4. Receive results on employees flagged for at risk mental health.
