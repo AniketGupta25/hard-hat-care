@@ -7,7 +7,7 @@ import {
 import DataRow from '@/components/DataRow'
 import CSVReader from 'react-csv-reader'
 
-function index() {
+function Home() {
 
   const [message, setMessage] = useState([]);
   const [onLandingPage, setOnLandingPage] = useState(true);
@@ -127,7 +127,7 @@ function index() {
 
             {csvData.map((val: any, key : number)=>{
               return (
-                <DataRow id={key} personIdText={val.id} dateOfJoining={val.date_of_joining} genderText={val.gender} designationText={val.designation} resourceText={val.resource_allocation} mentalText={(Math.abs(10 - val.mental_fatigue_score))}
+                <DataRow key={key} id={key} personIdText={val.id} dateOfJoining={val.date_of_joining} genderText={val.gender} designationText={val.designation} resourceText={val.resource_allocation} mentalText={(Math.abs(10 - val.mental_fatigue_score))}
                 isRed={val.SCORE >= 0.6} scoreText={val.SCORE}/>
               )
             })
@@ -139,4 +139,4 @@ function index() {
   );
 }
 
-export default index;
+export default Home;
