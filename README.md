@@ -38,7 +38,7 @@ Hard Hat Care uses a model that computes a mental health score based on the foll
 4. Resource Allocation ([1.0, 10.0] where higher means higher workload)
 5. Performance ([0.0, 10.0] where higher means higher performance)
 
-Clients must upload a CSV file containing this data. This mental health score is used to flag employees.
+Clients must upload a CSV file containing this data. This mental health score is used to flag employees. Download [CSV Template]()
 
 ## How to Use :notebook:
 
