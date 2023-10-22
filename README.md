@@ -19,7 +19,7 @@ Some factors include:
 * A highly-stressful environment 
 * 8+ work hours with little break 
 * Physically demanding tasks 
-* Seasonal layoffs that leave workers with no job 
+* Seasonal layoffs that leave workers unemployed 
 
 Construction workers are discouraged from discussing their mental health, as there is a strong stigma associated with such conversations. Therefore, companies should take initiative to help support the people that form the backbone of society. However, it's extremely difficult for companies to keep track of their many employees, making it hard to identify struggling individuals. That's where we come in.
 
@@ -71,4 +71,4 @@ The ultimate goal is to create a more mentally healthy and supportive environmen
 ## Contribution :smile:
 
 
-This project was made for HackTX 2023 with the help of [Andy](), [Ishan](), [Evan](), and [Aniket]()
+This project was made for HackTX 2023 with the help of [Andy](), [Ishan](), [Evan](), and [Aniket](https://www.linkedin.com/in/aniketgupta25/)
