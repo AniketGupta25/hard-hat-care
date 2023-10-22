@@ -40,11 +40,11 @@ This enables companies and managers to perform follow-up actions and provide the
 ### How does it work:question:
 
 Hard Hat Care uses a model that computes a mental health score based on the following inputs:
-1. Date of Joining
-2. Gender
-3. Designation (Seniority)
-4. Resource Allocation
-5. Mental Fatigue Score
+1. Date of Joining (YYYY-MM-DD)
+2. Gender (Male or Female)
+3. Designation aka Seniority ([0.0, 5.0] higher value is higher designation)
+4. Resource Allocation ([1.0, 10.0] higher means more resource allocation)
+5. Mental Fatigue Score ([0.0, 10.0] with 10.0 being highest fatigue level)
 
 Clients must upload a CSV file containing this data. This score is used to flag employees.
 
