@@ -72,6 +72,7 @@ Clients must upload a CSV file containing this data. This score is used to flag 
 ## What we learned :mortar_board:
 
 The construction industry poses specific challenges to the mental health of its workers, including high stress, physical strain, job insecurity, and isolation. However, there is a growing recognition of these issues, and efforts are being made to improve mental health awareness, reduce stigma, and provide support and resources to workers in this field. 
+
 The ultimate goal is to create a more mentally healthy and supportive environment within the construction industry. We hope our tool can play a small part in acheiving this goal. :)
 
 
