@@ -49,7 +49,7 @@ export default function Home() {
   }
 
   const onSubmit = async () => {
-    const response = await fetch("/api/process", fetchConfig);
+    const response = await fetch("/api/", fetchConfig);
     const data = await response.json();
   }
 
@@ -77,7 +77,7 @@ export default function Home() {
             <Heading fontSize="5xl">Upload CSV</Heading>
             <Text fontSize="lg" width="75vw">Upload a CSV file here to begin the process</Text>
             
-              <CSVReader
+              {/* <CSVReader
                 cssClass="csv-reader-input"
                 // label="Select CSV with secret Death Star statistics"
                 onFileLoaded={(data : Array<any>, fileInfo : any, originalFile : File) => setCSVData(data)}
@@ -86,7 +86,7 @@ export default function Home() {
                 inputId="ObiWan"
                 inputName="ObiWan"
                 inputStyle={{color: 'red'}}
-              />
+              /> */}
       
             <Button colorScheme='purple' onClick={()=>{onSubmit()}}>Process Data</Button>
           </Flex>

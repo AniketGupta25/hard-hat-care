@@ -4,7 +4,7 @@ const {spawn} = require('child_process');
 
 async function runPython(question : any) {
   const execSync = require('child_process').execSync
-  const pythonProcess = execSync('python3 pages/api/hello.py')
+  const pythonProcess = execSync('python pages/api/model.py')
 
   console.log(pythonProcess.toString());
 
