@@ -1,7 +1,7 @@
 # Hard-Hat Care
 
 
-Hard-Hat Care is a website intended to improve the mental health of
+Hard Hat Care is a website intended to improve the mental health of
 construction workers by flagging employees with signs of depression.
 
 By using a model trained on the causes of depression in the workplace, 
@@ -37,7 +37,7 @@ Hard-Hat Care serves as a tool to easily organize a large database of employee r
 
 ### How does it work:question:
 
-Hard-Hat Care uses a model that computes the following inputs:
+Hard Hat Care uses a model that computes the following inputs:
 1. Date of Joining
 2. Gender
 3. Designation (Seniority)
@@ -69,11 +69,11 @@ Clients must upload a CSV file with these inputs.
 
 
 ## What we learned :mortar_board:
----
+
 The construction industry poses specific challenges to the mental health of its workers, including high stress, physical strain, job insecurity, and isolation. However, there is a growing recognition of these issues, and efforts are being made to improve mental health awareness, reduce stigma, and provide support and resources to workers in this field. The ultimate goal is to create a more mentally healthy and supportive environment within the construction industry. 
 
 
 ## Contribution :smile:
----
+
 
 This project was made for HackTX 2023 with the help of [Andy](), [Ishan](), [Evan](), [Aniket]()
