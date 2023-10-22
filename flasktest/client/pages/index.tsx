@@ -40,9 +40,21 @@ function index() {
     ).then(
       (data) => {
         console.log(data.result)
-        setMessage(data.result)
+
+        const copyData = [...csvData]
+        for (let i = 0; i < csvData.length; i++) {
+          copyData[i].SCORE = data.result[i][1].toFixed(4);
+        }
+        setCSVData(copyData);
       }
     );
+  }
+
+  const setData = (data : Array<any>)=>{
+    for (let i = 0; i < data.length; i++) {
+      data[i].SCORE = "";
+    }
+    setCSVData(data)
   }
 
   return(
@@ -63,51 +75,60 @@ function index() {
       }
 
       {!onLandingPage && 
-        <Flex direction="column" bg="white" height="100vh" p="20px" width="100vw" align="center">
-          <Flex direction="column" width="100%" color="black" textAlign="center" align="center">
-            <Heading fontSize="5xl">Upload CSV</Heading>
+        <Flex direction="column" bg="whitesmoke" height="100vh" p="20px" width="100vw" align="center">
+          <Flex direction="column" width="50%" color="black" textAlign="center" align="center">
+            <Heading fontSize="9xl">Upload CSV</Heading>
             <Text fontSize="lg" width="75vw">Upload a CSV file here to begin the process</Text>
             
+            <Box width="100%" mt="20px">
               <CSVReader
                 cssClass="csv-reader-input"
                 // label="Select CSV with secret Death Star statistics"
-                onFileLoaded={(data : any[], fileInfo : any) => setCSVData(data)}
+                onFileLoaded={(data : any[], fileInfo : any) => setData(data)}
                 onError={()=>{}}
                 parserOptions={papaparseOptions}
                 inputId="ObiWan"
                 inputName="ObiWan"
                 inputStyle={{color: 'red'}}
               />
-      
-            <Button colorScheme='purple' onClick={()=>{onSubmit()}}>Process Data</Button>
+            </Box>
+    
+            <Button colorScheme='purple' mt="20px" width="100%" onClick={()=>{onSubmit()}}>Process Data</Button>
           </Flex>
 
           <Divider m="20px"/>
 
           <Flex direction="column" width="90%" bg="whitesmoke" p="20px">
-            <Box bg="lightgray" p="10px" border="solid">
-              <Grid templateColumns='repeat(5, 1fr)' gap={6}>
+            <Box bg="lightgray" p="10px" border="solid" mb="20px">
+              <Grid templateColumns='repeat(7, 1fr)' gap={6}>
                 <Flex w='100%' h='10' justify="center" align="center">
-                  <Text fontWeight="900" fontSize="3xl">Date of Joining</Text>
+                  <Text fontWeight="900" fontSize="lg">ID</Text>
                 </Flex>
                 <Flex w='100%' h='10' justify="center" align="center">
-                  <Text fontWeight="900" fontSize="3xl">Gender</Text>
+                  <Text fontWeight="900" fontSize="lg">Date of Joining</Text>
                 </Flex>
                 <Flex w='100%' h='10' justify="center" align="center">
-                  <Text fontWeight="900" fontSize="3xl">Designation</Text>
+                  <Text fontWeight="900" fontSize="lg">Gender</Text>
                 </Flex>
                 <Flex w='100%' h='10' justify="center" align="center">
-                  <Text fontWeight="900" fontSize="3xl">Resource Allocation</Text>
+                  <Text fontWeight="900" fontSize="lg">Designation</Text>
                 </Flex>
                 <Flex w='100%' h='10' justify="center" align="center">
-                  <Text fontWeight="900" fontSize="3xl">Mental Fatigue</Text>
+                  <Text fontWeight="900" fontSize="lg">Resource Allocation</Text>
+                </Flex>
+                <Flex w='100%' h='10' justify="center" align="center">
+                  <Text fontWeight="900" fontSize="lg">Performance</Text>
+                </Flex>
+                <Flex w='100%' h='10' justify="center" align="center">
+                  <Text fontWeight="900" fontSize="lg">Score</Text>
                 </Flex>
               </Grid>
             </Box>
 
             {csvData.map((val: any, key : number)=>{
               return (
-                <DataRow dateOfJoining={val.date_of_joining} genderText={val.gender} designationText={val.designation} resourceText={val.resource_allocation} mentalText={val.mental_fatigue_score}/>
+                <DataRow id={key} personIdText={val.id} dateOfJoining={val.date_of_joining} genderText={val.gender} designationText={val.designation} resourceText={val.resource_allocation} mentalText={(Math.abs(10 - val.mental_fatigue_score))}
+                isRed={val.SCORE >= 0.6} scoreText={val.SCORE}/>
               )
             })
             }
