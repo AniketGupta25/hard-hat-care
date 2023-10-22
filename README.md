@@ -19,11 +19,11 @@ We featured a robust interactive website that enables employers to organize and 
 
 Numerous factors go into why construction workers are struggling with mental health. Mainly, construction is a mentally and physically draining job.
 Other factors include:
-* Highly-stressful environment *(Imagine working all day in the Texas summer while wearing a full uniform)* :sweat:
-* 8+ Work Hours with little break :tired_face:
-* Physically demanding job leading to injuries :boom:
-* Seasonal layoff leaving workers with no job:cold_sweat:
-* High variance of salary :dollar:
+* Highly-stressful environment *(Imagine working all day in the Texas summer while wearing a full uniform)* 
+* 8+ Work Hours with little break 
+* Physically demanding job leading to injuries 
+* Seasonal layoff leaving workers with no job
+* High variance of salary 
 
 Furthermore, there is a lack of resources to help these struggling construction workers due to their work environment. For one, construction workers are discouraged from discussing about their mental health due to their fear of losing their jobs. As a result, many construction workers bottled up their emotions which could lead to depression.
 
