@@ -1,5 +1,5 @@
 # Hard-Hat Care
----
+
 
 Hard-Hat Care is a website intended to improve the mental health of
 construction workers by flagging employees with signs of depression.
@@ -14,7 +14,6 @@ We featured a robust interactive website that enables employers to organize and 
 
 ## Hard hats are not enough :triangular_flag_on_post:
 
----
 
 ***Did you know?*** According to a [2020 report](https://www.cdc.gov/mmwr/volumes/69/wr/mm6903a1.htm) from the Center for Disease Control (CDC), the construction industry records the **second highest suicide** rate in the U.S.
 
@@ -31,7 +30,6 @@ Furthermore, there is a lack of resources to help these struggling construction 
 Therefore, companies and employers should take the initiative action to help support their workers who act as the backbone of society. However, it's extremely difficult for companies to keep track of their thousands of employees thus making it hard to identify struggling individuals.
 
 ## Introducing our products :bulb:
----
 
 Hard-Hat Care serves as a tool to easily organize a large database of employee records and flag individuals who may be struggling with their mental health, and the rules governing flagging mechanics are based on a machine learning model. This enables companies and managers to perform follow-up actions and provide the necessary resources to help struggling employees.
     
@@ -50,7 +48,7 @@ Hard-Hat Care uses a model that computes the following inputs:
 Clients must upload a CSV file with these inputs.
 
 ## How to Use :notebook:
----
+
 1. Go to [HardHatCare]() website
 2. Click the *"Start Analysis"* button
 3. Upload a CSV file to the website (**Note:** an empty template CSV file is provided)
@@ -58,7 +56,7 @@ Clients must upload a CSV file with these inputs.
 
 
 ## Challenges faced when building :confused:
----
+
 **Finding Accurate Data:** Given the serious problem of mental health, we want to find an accurate and reliable quantitative database to train our model. However, this proves this to be the biggest obstacle due to the following reasons
 * Lack of dataset in mental health in general *(especially in blue-collar jobs)*
 * Lack of numerical data for our model to train
