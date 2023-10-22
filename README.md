@@ -33,8 +33,8 @@ Therefore, companies and employers should take the initiative to help support th
 ## Introducing our products :bulb:
 
 Hard-Hat Care serves as a tool to easily organize a large database of employee records and flag individuals who may be struggling with their mental health. 
-
-The rules governing flagging mechanics are based on a robustly-trained XGBoost and tuned machine learning model. This enables companies and managers to perform follow-up actions and provide the necessary resources to help struggling employees.    
+The rules governing flagging mechanics are based on a robustly-trained and tuned XGBoost Regressor machine learning model.
+This enables companies and managers to perform follow-up actions and provide the necessary resources to help their struggling employees.    
  
 
 ### How does it work:question:
