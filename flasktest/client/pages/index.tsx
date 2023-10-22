@@ -29,7 +29,7 @@ function Home() {
   }
 
   const onSubmit = () => {
-    fetch("http://localhost:8080/api/home", {
+    fetch("https://hardhatcare-41d6dcab4c90.herokuapp.com/api/home", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
