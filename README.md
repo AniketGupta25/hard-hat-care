@@ -10,7 +10,7 @@ We featured a robust interactive website that enables employers to organize and 
 **USE CASE:** Corporate officers can periodically leverage this tool to identify employees most at risk for depression and get them treatment.  
 
 
-**DISCLAIMER:** Hard-Hate Care is not intended to diagnose depression. This does not provide medical advice. Please seek professional care only.
+**DISCLAIMER:** Hard-Hate Care is not intended to diagnose depression. This does not provide medical advice. Seek professional care only.
 
 
 ## Hard hats are not enough :triangular_flag_on_post:
