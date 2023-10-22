@@ -57,9 +57,9 @@ Clients must upload a CSV file with these inputs.
 
 ## Challenges faced when building :confused:
 
-**Finding Accurate Data:** Given the serious problem of mental health, we want to find an accurate and reliable quantitative database to train our model. However, this proves this to be the biggest obstacle due to the following reasons
-* Lack of dataset in mental health in general *(especially in blue-collar jobs)*
-* Lack of numerical data for our model to train
+**Finding Accurate Data:** Given the serious problem of mental health, we want to find an accurate and reliable quantitative database to train our model. However, this proves this to be the biggest obstacle due to the following reasons:
+* Lack of datasets in the mental health sphere *(especially in blue-collar jobs)*
+* The time taken to find viable datasets with quantative data points, not textual
 
 **Implementation of Concept:** Since half of our team was participating in the Hackathon for the first time, we struggled to integrate smoothly across the stack. For example,
 * Connect the front end to the back end
