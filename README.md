@@ -6,7 +6,7 @@ Hard Hat Care aims improve the mental health of construction workers by flagging
 **USE CASE:** Corporate officers and site managers can leverage this tool to periodically identify at risk employees, allowing them to proactively reach out and provide the necessary mental health support. 
 
 
-**DISCLAIMER:** Hard-Hate Care is not intended to diagnose depression. This does not provide medical advice. Seek professional care only.
+**DISCLAIMER:** Hard-Hat Care is not intended to diagnose depression. This does not provide medical advice. Seek professional care only.
 
 
 ## Hard hats are not enough :triangular_flag_on_post:
