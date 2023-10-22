@@ -3,23 +3,22 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 const {spawn} = require('child_process');
 
 async function runPython(question : any) {
-  let python = spawn('python', ['python/hello.py']);
-  let dataToSend = '';
+  const execSync = require('child_process').execSync
+  const pythonProcess = execSync('python3 pages/api/hello.py')
 
-  for await (const data of python.stdout){
-    dataToSend += data.toString()
-  }
+  console.log(pythonProcess.toString());
+
+  return "";
 }
 
-
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   const question = req.body;
 
-  const answer = runPython(question);
-  console.log(question);
+  const answer = await runPython(question);
+  console.log(answer);
 
-  res.status(200).json({ data: answer })
+  res.status(200).json({ data: "evewf" })
 }
