@@ -79,4 +79,4 @@ The ultimate goal is to create a more mentally healthy and supportive environmen
 ## Contribution :smile:
 
 
-This project was made for HackTX 2023 with the help of [Andy](), [Ishan](), [Evan](), [Aniket]()
+This project was made for HackTX 2023 with the help of [Andy](), [Ishan](), [Evan](), and [Aniket]()
