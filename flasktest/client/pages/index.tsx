@@ -6,6 +6,7 @@ import {
 } from '@chakra-ui/react'
 import DataRow from '@/components/DataRow'
 import CSVReader from 'react-csv-reader'
+import Typewriter from "typewriter-effect"
 
 function Home() {
 
@@ -26,6 +27,29 @@ function Home() {
       header
         .toLowerCase()
         .replace(/\W/g, '_')
+  }
+
+  const CustomTypewriterEffect = (props : any) => {
+    const { strings, emojis, typeSpeed, pauseDelay, overallIterations } = props;
+    return (
+      <Typewriter
+        onInit={(tw) => {
+          tw.changeDelay(typeSpeed)
+          tw.changeDeleteSpeed(typeSpeed * 2)
+          // We want to revert to the first item after the last item, so we end with i=0
+          for (let i = 0; i <= strings.length * 1; i++) {
+            const index = i % strings.length
+  
+            // Restart
+            tw.deleteAll()
+            tw.typeString(strings[index])
+            tw.typeString(" ")
+            tw.pauseFor(pauseDelay)
+          }
+          tw.start()
+        }}
+      />
+    )
   }
 
   const onSubmit = () => {
@@ -69,8 +93,21 @@ function Home() {
       {onLandingPage && 
           <Flex bg="black" direction="column" height="100vh" width="100vw" color="white" align="center" justify="center" textAlign="center">
             <Heading fontSize="9xl">Hard Hat Care</Heading>
-            <Text fontSize="3xl" width="75vw">Providing the tools to care for what matters most: your people</Text>
-            <Button colorScheme='purple' mt="60px" onClick={uploadCSV}>Start Analysis</Button>
+            <Box fontSize="5xl" width="75vw" color="pink">
+              <CustomTypewriterEffect
+                  strings={[
+                    "The Mental Hard Hat for Your Employees",
+                    "Examine the Well-Being of Your Employees",
+                    "Use Artificial Intelligence to Uncover Insights",
+                  ]}
+                  fontSize={"9xl"}
+                  emojis={["🎣", "🐠", "🚢"]}
+                  typeSpeed={40}
+                  pauseDelay={1250}
+                  overallIterations={10}
+                />
+            </Box>
+            <Button colorScheme='purple' fontSize={"3xl"} mt="30px" height="50px" width="400px" onClick={uploadCSV}>Start Analysis</Button>
           </Flex>
       }
 
