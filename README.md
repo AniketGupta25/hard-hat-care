@@ -1,15 +1,16 @@
 # Hard-Hat Care
 
 
-Hard Hat Care is a website intended to improve the mental health of
-construction workers by flagging employees with signs of depression.
+Hard Hat Care is a website intended to improve the mental health of construction workers by flagging employees with signs of depression.
 
-By using a model trained on the causes of depression in the workplace, 
-Hard Hat Care will provide a strong probability of workers with depression.
+By using a model trained on the causes of depression in the workplace, Hard Hat Care will provide a strong probability of workers with depression.
 
 We featured a robust interactive website that enables employers to organize and examine the mental well-being of their employees.
 
-**PLEASE NOTE:** Hard-Hate Care is not intended  to diagnose depression
+INTENDED USE CASE: Corporate officers can periodically leverage this tool to identify employees most at risk for depression and get them treatment.  
+
+
+**PLEASE NOTE:** Hard-Hate Care is not intended to diagnose depression.
 
 
 ## Hard hats are not enough :triangular_flag_on_post:
