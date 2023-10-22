@@ -44,7 +44,7 @@ Clients must upload a CSV file containing this data. This mental health score is
 
 1. Go to [HardHatCare](https://hardhatcare.vercel.app/) website
 2. Click the *"Start Analysis"* button
-3. Upload a CSV file to the website (**Note:** an empty template CSV file is provided)
+3. Upload a CSV file to the website (**Note:** empty CSV file above)
 4. Receive results on employees flagged for at risk mental health.
 
 
